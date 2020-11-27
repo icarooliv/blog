@@ -1,0 +1,30 @@
+{{ define "styles" }}
+    {{ $.Scratch.Set "style_opts" (dict "src" "scss/pages/about.scss" "dest" "css/about.css") }}
+{{ end }}
+
+{{ define "main" }}
+
+<div class="splash-container">
+  <div class="splash">
+    
+    <h1>{{ .Params.heading }}<span class="fancy">.</span></h1>
+    {{ if isset .Params "handle" }}
+    <span class="handle">@{{ .Params.handle }}</span>
+    {{ end }}
+    <h2>
+      {{ .Params.subheading }}
+    </h2>
+    <div class="langs">
+        <h4 class="langs__lang">elixir</h4>
+        <h4 class="langs__lang">phoenix</h4>
+        <h4 class="langs__lang">node.js</h4>
+        <h4 class="langs__lang">python</h4>
+        <h4 class="langs__lang">ruby</h4>
+    </div>
+    <!-- Replace MEEEEE -->
+
+    {{ partial "social-icons.html" .}}
+  </div>
+</div>
+
+{{ end }}

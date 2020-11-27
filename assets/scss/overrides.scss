@@ -1,0 +1,116 @@
+$black: white;
+$lightGrey: #f7f7f7;
+$greyTableBorder: #eeeeee;
+$grey: #9b9b9b;
+$darkGrey: #717171;
+$primary: #50fa7b;
+$white: #202124;
+
+body {
+    background-color: #202124;
+}
+
+.post__header {
+    h2::before {
+        content: none;
+    }
+}
+
+.post__title {
+    margin-top: 0;
+    font-weight: 100;
+
+    a:hover {
+        text-decoration: none;
+        border-bottom: 3px solid #50fa7b;
+    }
+}
+
+.nav__list a {
+    text-decoration: none;
+
+    &.active {
+        border-bottom: 3px solid #50fa7b;
+    }
+
+}
+
+.nav--active .nav {
+    visibility: visible;
+    height: 100%;
+    width: 100%;
+    border-bottom: 3px solid #50fa7b;
+
+    @media screen and (min-width: $medium) {
+        width: $navWidth;
+    }
+}
+
+.social-icons__icons svg {
+    color: #50fa7b;
+    background-color: #50fa7b
+}
+
+h1::before {
+    color: #50fa7b;
+    content: "# ";
+}
+
+h2::before {
+    color: #50fa7b;
+    content: "## ";
+}
+
+h3::before {
+    color: #50fa7b;
+    content: "### ";
+}
+
+h4::before {
+    color: #50fa7b;
+    content: "#### ";
+}
+
+h5::before {
+    color: #50fa7b;
+    content: "##### ";
+}
+
+h6::before {
+    color: #50fa7b;
+    content: "###### ";
+}
+
+.splash {
+    h1::before {
+        content: none;
+    }
+
+    h2::before {
+        content: none;
+    }
+
+    h2 {
+        text-decoration: none;
+        border-bottom: 3px solid #50fa7b;
+    }
+
+    h4::before {
+        color: #50fa7b;
+        content: "#";
+    }
+}
+
+.langs h4 {
+    display: inline-block
+}
+
+.social-icons {
+    justify-content: flex-start;
+    padding-top: 10rem;
+    margin-left: -0.8rem; // offset to negate icon's padding to align with text above
+
+    a {
+        background-color: #50fa7b;
+    }
+}
